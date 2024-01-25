@@ -18,6 +18,8 @@ router.get('/', async function (req, res) {
 });
 
 router.post('/post', upload.single('image'), async function (req, res) {
+    res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
     // folder upload
     const imagePath = path.join(__dirname, '/public/images');
     // call class Resize

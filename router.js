@@ -37,5 +37,10 @@ router.post("/post", upload.single("image"), async function (req, res) {
     })
   }
 });
+router.get('/post', async function (req, res) { 
+    return res.json({
+        
+    })
+})
 
 module.exports = router;

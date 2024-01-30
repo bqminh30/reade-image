@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-app.use('/', router);
+app.use('/upload', router);
 
 app.listen(port, function () {
     console.log('Server is running on PORT',port);
